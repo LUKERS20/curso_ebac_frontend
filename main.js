@@ -31,7 +31,7 @@ form.addEventListener('submit', function(e) {
         valorA.style.border = '2px solid red';
         valorB.style.border = '2px solid red';
         document.querySelector('.error-message').style.display = 'block';
-        document.querySelector('.success-message').style.display = 'none'
+        document.querySelector('.success-message').style.display = 'none';
         
 
         valorA.value = '';
