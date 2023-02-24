@@ -1,15 +1,15 @@
 const form = document.getElementById('form-validar');
-const valorA = document.getElementById('campo-A');
-const valorB = document.getElementById('campo-B');
-let formEvalido = false;
+
 
 function validanumero(valorA, valorB) {
     return valorB > valorA
 }
 
 form.addEventListener('submit', function(e) {
+    let formEvalido = false;
     e.preventDefault();
-
+    const valorA = document.getElementById('campo-A');
+    const valorB = document.getElementById('campo-B');
     const mensagemSucesso = `Formulário validado com sucesso! <b>Valor de A: ${valorA.value}</b> é menor que o <b>Valor de B: ${valorB.value}</b>`;
     const mensagemErro = `Formulário negado! <b>Valor de A: ${valorA.value}</b> é maior que o <b>Valor de B: ${valorB.value}</b>`;
 
