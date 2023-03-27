@@ -14,7 +14,7 @@ form.addEventListener('submit', function(e) {
     const mensagemErro = `Formulário negado! <b>Valor de A: ${valorA.value}</b> é maior que o <b>Valor de B: ${valorB.value}</b>`;
 
 
-    formEvalido = validanumero(valorA.value, valorB.value)
+    formEvalido = validanumero(valorB.value, valorA.value)
     if (formEvalido) {
         const containerMensagemSucesso =  document.querySelector('.success-message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
