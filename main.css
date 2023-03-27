@@ -12,10 +12,3 @@ h1 {
 	text-align: center;
 }
 
-input[type="text"] {
-    display: block;
-    padding: 8px;
-    margin-bottom: 8px;
-    width: 100%;
-    resize: none;
-}
