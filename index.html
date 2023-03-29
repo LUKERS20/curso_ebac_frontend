@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,12 +27,29 @@
         <label for="cep">CEP:</label>
         <input type="text" id="cep" name="cep">
     </form>
+    <button type="submit">Cadastrar</button>
 
     <script>
         $(document).ready(function(){
             $('#telefone').mask('(00) 0000-0000');
             $('#cpf').mask('000.000.000-00');
             $('#cep').mask('00000-000');
+
+            $('form').validade({
+                rules: {
+                    nome: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefone: {
+                        required: true
+                    }
+                }
+            })
+
         });
     </script>
 </body>
